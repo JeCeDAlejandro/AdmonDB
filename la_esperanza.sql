@@ -1,16 +1,16 @@
 use master
 create database la_esperanza
-drop database la_esperanza
+/*drop database la_esperanza*/
 
 use la_esperanza
 go
 
 create table sucursal (
   numero_sucursal       INT				NOT NULL,
-  nombre_sucursal       VARCHAR(20)		NOT NULL,
-  direccion_sucursal    VARCHAR(20)		NOT NULL,
-  telefono_sucursal     VARCHAR(20)		NOT NULL,
-  gerente				VARCHAR(20)		NOT NULL
+  nombre_sucursal       VARCHAR(40)		NOT NULL,
+  direccion_sucursal    VARCHAR(40)		NOT NULL,
+  telefono_sucursal     VARCHAR(40)		NOT NULL,
+  gerente				VARCHAR(40)		NOT NULL
 );
 create table empleado (
   numero_empleado       VARCHAR(13)		NOT NULL,
@@ -128,8 +128,23 @@ ALTER TABLE producto_compra
 insert into sucursal
 	(numero_sucursal, nombre_sucursal, direccion_sucursal, telefono_sucursal, gerente)
 VALUES
-	('0', '', 'Avenida Siempreviva 742', '', ''),
-	('1', '', 'Whitehaven Mansions Apt 56B', '', ''),
-	('2', '', 'Calle Ignacio Rayon No.949', '', ''),
-	('3', '', 'Avenida Independencia No. 670', '', ''),
-	('4', '', 'Calle 21 De Marzo No. 17', '', '')
+	(1, 'Flores', 'Mansions Apt 56B', '559684725364', 'Andrea Lopez'),
+	(2, 'El Buen Sabor', 'Calle Ignacio Rayon No.949', '559632874125', 'Juan Pacheco'),
+	(3, 'Cafetal', 'Independencia No. 670', '559632114782', 'Ramon Hernandez'),
+	(4, 'Boulevard', 'Marzo No. 17', '559683247156', 'Dolores Flores'),
+	(11, 'Flores', 'Mansions Apt 56B', '559684725364', 'Andrea Lopez'),
+	(12, 'El Buen Sabor', 'Calle Ignacio Rayon No.949', '559632874125', 'Juan Pacheco'),
+	(13, 'Cafetal', 'Independencia No. 670', '559632114782', 'Ramon Hernandez'),
+	(14, 'Boulevard', 'Marzo No. 17', '559683247156', 'Dolores Flores'),
+	(21, 'Flores', 'Mansions Apt 56B', '559684725364', 'Andrea Lopez'),
+	(22, 'El Buen Sabor', 'Calle Ignacio Rayon No.949', '559632874125', 'Juan Pacheco'),
+	(23, 'Cafetal', 'Independencia No. 670', '559632114782', 'Ramon Hernandez'),
+	(24, 'Boulevard', 'Marzo No. 17', '559683247156', 'Dolores Flores'),
+	(31, 'Flores', 'Mansions Apt 56B', '559684725364', 'Andrea Lopez'),
+	(32, 'El Buen Sabor', 'Calle Ignacio Rayon No.949', '559632874125', 'Juan Pacheco'),
+	(33, 'Cafetal', 'Independencia No. 670', '559632114782', 'Ramon Hernandez'),
+	(34, 'Boulevard', 'Marzo No. 17', '559683247156', 'Dolores Flores')
+
+select * from sucursal;
+
+update sucursal set telefono_sucursal='555555555555' where nombre_sucursal = 'El Buen Sabor';
