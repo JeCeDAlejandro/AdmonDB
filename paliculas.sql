@@ -33,12 +33,15 @@ CREATE TABLE ACTOR_PELICULA (
 	CLAVE_PELICULA VARCHAR(5)NOT NULL
 );
 
+update ACTOR_PRINCIPAL set NOM_ACT_PRINCIPAL = 'Juana Perez' where ID_ACT_PRINCIPAL = 'A1'
+
 insert into ACTOR_PRINCIPAL
 values
 ('A1', 'Juan Perez',	'56-57-20', 'Av 13'),
 ('A2', 'Luis Gomez',	'14-34-12', 'Calle Zapotecas'),
 ('A3', 'Maria Guzman',	'78-40-13', 'Periferico 123'),
 ('A4', 'Pedro Juarez',	'77-34-90', 'Oriente 45')
+update ACTOR_PRINCIPAL set NOM_ACT_PRINCIPAL = 'Juana Perez' where ID_ACT_PRINCIPAL = 'A1'
 
 insert into PAPEL
 values
